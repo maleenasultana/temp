@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: azure;
+                border: 10px solid black;
+                padding: 10px;
+                margin:10px;
+            }
+            img{
+             border-radius: 50%;
+            }
+            .container{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+            }
+            .animation{
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  border: 1px solid red;
+                  background-color: black;
+                  animation-name:ball ;
+                  position: relative;
+                  animation-duration: 1s;
+                  animation-delay: 2s;
+                  animation-iteration-count: 5;
+                  animation-direction:normal;
+                  animation-timing-function:step-end;
+                  animation-fill-mode:both;
+                  
+            }
+            @keyframes ball{
+                0%{
+                    background-color: red;
+                   
+                    top: 0px;
+                    bottom:100%;
+                }
+                50%{
+                    background-color: blue;
+                    
+                    top:200px;
+                    bottom: 100%;
+                }
+                75%{
+                    background-color:green;
+                    
+                    top:200px;
+                    bottom:400%
+                } 
+                 100%{
+                    background-color: pink;
+                    left:0px;
+                    right:200px;
+                }
+            }
+            @media screen and (min-width:600px){
+                body{
+                    background-color: aquamarine;
+                    border: 5 solid black;
+                    padding: 2px;
+                    margin:2px;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div >
+                <h1>my first css application</h1>
+                <p>Direct child</p>
+            </div>
+            <div>
+                <p>Direct Child</p>
+                <img height="100" width="100" alt="relevel logo"
+                src="https://th.bing.com/th/id/OIP.c4SoBZgdQOvZk_W_S-rcIQHaEK?pid=ImgDet&rs=1"/>
+            </div>
+            <div class="animation"></div>
+        </div>
+    </body>
+</html>
